@@ -1,306 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Ishi ❤️</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(180deg,#111,#222);
-color:white;
-text-align:center;
-overflow-x:hidden;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:600px;
-line-height:1.8;
-}
-
-.btn{
-padding:15px 30px;
-border:none;
-border-radius:50px;
-background:#ff4d88;
-color:white;
-font-size:18px;
-cursor:pointer;
-margin-top:20px;
-}
-
-.section{
-display:none;
-max-width:900px;
-margin:auto;
-padding:50px 20px;
-}
-
-.card{
-background:rgba(255,255,255,.08);
-padding:25px;
-border-radius:20px;
-margin-bottom:25px;
-}
-
-.gallery{
-position:relative;
-height:450px;
-overflow:hidden;
-border-radius:20px;
-}
-
-.gallery img{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:1s;
-}
-
-.gallery img.active{
-opacity:1;
-}
-
-.hearts{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-}
-
-.heart{
-position:absolute;
-animation:float 8s linear infinite;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh);
-opacity:1;
-}
-100%{
-transform:translateY(-100px);
-opacity:0;
-}
-}
-
-.love-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.love-card{
-background:rgba(255,255,255,.08);
-padding:20px;
-border-radius:15px;
-}
-
-.final{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-padding:20px;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff;text-align:center}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px}
+button{padding:14px 28px;border:none;border-radius:30px;background:#ff4d88;color:#fff;font-size:18px;cursor:pointer}
+#main{display:none;max-width:900px;margin:auto;padding:40px}
+.card{background:#222;padding:20px;border-radius:16px;margin:20px}
+.gallery img{display:none;max-width:100%;border-radius:16px}
+.gallery img.active{display:block}
 </style>
 </head>
 <body>
-<div class="hearts"></div>
 <div class="hero">
 <h1>Hi Ishi ❤️</h1>
-<p>
-Before anything else,
-I want you to know this page exists because you mean the world to me.
-</p>
-<button class="btn" onclick="openLetter()">
-Open My Heart ❤️
-</button>
+<p>This page exists because you mean the world to me.</p>
+<button onclick="openLetter()">Open My Heart ❤️</button>
 </div>
-<div class="section" id="main">
+
+<div id="main">
 <div class="card">
 <h2>To The Most Adorable & Lovable Person In My Life ❤️</h2>
-<br>
-<p style="line-height:2">
-Ishi,
-
-I am sorry.
-
-Sorry for hurting the most adorable and lovable person in my life.
-
-I’m just a guy who has always been slow when it comes to expressing love.
-
-Not because I don’t feel it.
-
-But because I struggle to show it properly.
-
-You deserve effort.
-
-You deserve reassurance.
-
-You deserve peace.
-
-You deserve love that is visible every day.
-
-I know words alone cannot heal hurt.
-
-But I hope you know they come from a place of honesty.
-
-Thank you for every smile.
-
-Every adventure.
-
-Every memory.
-
-Every hug.
-
-And every moment you’ve shared with me.
-
-Most importantly,
-
-Thank you for being you.
-
-Love,
-
-<br>
-Yashu ❤️
-
+<p style="line-height:1.8">
+Ishi,<br><br>
+I'm sorry for hurting the most adorable and lovable person in my life.<br><br>
+I'm just a guy who has always been slow and weak in expressing love, but I'm learning things the hard way.<br><br>
+Thank you for every smile, every memory and every adventure.<br><br>
+Forever yours,<br>Yashu ❤️
 </p>
 </div>
+
 <div class="card">
-<h2>Our Favourite Memories ❤️</h2>
-<br>
+<h2>Our Memories ❤️</h2>
 <div class="gallery">
 <img src="photo1.JPG" class="active">
-<img src="photo2.jpg">
+<img src="photo2.JPG">
 <img src="photo3.JPG">
 <img src="photo4.JPG">
 <img src="photo5.JPG">
 </div>
 </div>
+
 <div class="card">
-<h2>Things I Love About You ❤️</h2>
-<div class="love-grid">
-<div class="love-card">❤️ Your smile</div>
-<div class="love-card">❤️ Your kindness</div>
-<div class="love-card">❤️ The way you care</div>
-<div class="love-card">❤️ The way you make ordinary days special</div>
-<div class="love-card">❤️ The way you make every place feel like home</div>
-<div class="love-card">❤️ The way you believe in me</div>
+<button onclick="yesClick()">Yes ❤️</button>
 </div>
 </div>
-<div class="card">
-<h2>Can We Keep Making Memories Together? ❤️</h2>
-<br>
-<button class="btn" onclick="forgive()">
-Yes ❤️
-</button>
-<button class="btn" id="noBtn">
-No 😔
-</button>
-</div>
-</div>
+
 <script>
-
 function openLetter(){
-document.getElementById('main').style.display='block';
-window.scrollTo({
-top:window.innerHeight,
-behavior:'smooth'
-});
+ document.getElementById('main').style.display='block';
+ window.scrollTo({top:window.innerHeight,behavior:'smooth'});
 }
-
 const imgs=document.querySelectorAll('.gallery img');
-let current=0;
-
+let i=0;
 setInterval(()=>{
-imgs[current].classList.remove('active');
-current=(current+1)%imgs.length;
-imgs[current].classList.add('active');
+ imgs[i].classList.remove('active');
+ i=(i+1)%imgs.length;
+ imgs[i].classList.add('active');
 },2500);
 
-const hearts=document.querySelector('.hearts');
-
-setInterval(()=>{
-const h=document.createElement('div');
-h.className='heart';
-h.innerHTML='❤️';
-h.style.left=Math.random()*100+'vw';
-h.style.fontSize=(15+Math.random()*25)+'px';
-hearts.appendChild(h);
-
-setTimeout(()=>{
-h.remove();
-},8000);
-
-},400);
-
-const noBtn=document.getElementById('noBtn');
-
-noBtn.addEventListener('mouseover',()=>{
-
-noBtn.style.position='absolute';
-noBtn.style.left=Math.random()*70+'vw';
-noBtn.style.top=Math.random()*50+'vh';
-
-});
-
-function forgive(){
-
-document.body.innerHTML=`
-
-<div class="final">
-
-<h1 style="font-size:3rem">
-I Love You Ishi ❤️
-</h1>
-
-<br>
-
-<p style="font-size:20px;max-width:600px;line-height:1.8">
-
-I promise to keep learning,
-
-keep growing,
-
-and keep loving you better.
-
-</p>
-
-<br>
-
-<h2>
-Forever Yours,
-<br>
-Yashu ❤️
-</h2>
-
-</div>
-
-`;
-
+function yesClick(){
+ document.body.innerHTML='<div class="hero"><h1>I Love You Ishi ❤️</h1><p>I promise to keep learning, keep growing and keep loving you better every day.</p><h2>Forever Yours,<br>Yashu ❤️</h2></div>';
 }
-
-</script
+</script>
+</body>
+</html>
