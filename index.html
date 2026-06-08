@@ -2,16 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Ishi ❤️</title>
-
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-margin:0;
-font-family:Arial;
-background:#111;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#111,#222);
 color:white;
 text-align:center;
 overflow-x:hidden;
@@ -26,104 +24,137 @@ align-items:center;
 padding:20px;
 }
 
-button{
-padding:15px 25px;
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+line-height:1.8;
+}
+
+.btn{
+padding:15px 30px;
 border:none;
-border-radius:30px;
+border-radius:50px;
+background:#ff4d88;
+color:white;
 font-size:18px;
 cursor:pointer;
 margin-top:20px;
 }
 
-.open{
-background:#ff4d88;
-color:white;
-}
-
-section{
-padding:50px 20px;
+.section{
+display:none;
 max-width:900px;
 margin:auto;
+padding:50px 20px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
 }
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
+position:relative;
+height:450px;
+overflow:hidden;
 border-radius:20px;
 }
 
-#letter{
-display:none;
+.gallery img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:1s;
 }
 
-#forgive{
-display:none;
-padding-bottom:100px;
+.gallery img.active{
+opacity:1;
 }
 
 .hearts{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
 pointer-events:none;
 }
 
+.heart{
+position:absolute;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+.love-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.love-card{
+background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:15px;
+}
+
+.final{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+}
 </style>
 </head>
-
 <body>
-
+<div class="hearts"></div>
 <div class="hero">
-
 <h1>Hi Ishi ❤️</h1>
-
 <p>
 Before anything else,
 I want you to know this page exists because you mean the world to me.
 </p>
-
-<button class="open" onclick="showLetter()">
+<button class="btn" onclick="openLetter()">
 Open My Heart ❤️
 </button>
-
 </div>
-
-<section id="letter">
-
+<div class="section" id="main">
+<div class="card">
 <h2>To The Most Adorable & Lovable Person In My Life ❤️</h2>
-
-<p>
-
+<br>
+<p style="line-height:2">
 Ishi,
 
 I am sorry.
 
-Sorry for hurting the person I love the most.
+Sorry for hurting the most adorable and lovable person in my life.
 
-When I look at these pictures, I don't just see photos.
+I’m just a guy who has always been slow when it comes to expressing love.
 
-I see memories.
+Not because I don’t feel it.
 
-I see laughter.
-
-I see comfort.
-
-I see the person who has stood beside me through so much.
-
-The truth is that I have always been slow when it comes to expressing love.
-
-Not because I don't feel it.
-
-But because sometimes I struggle to show it in the way you deserve.
-
-That isn't an excuse.
-
-It's simply something I am learning about myself the hard way.
+But because I struggle to show it properly.
 
 You deserve effort.
 
@@ -131,11 +162,9 @@ You deserve reassurance.
 
 You deserve peace.
 
-You deserve love that is visible.
+You deserve love that is visible every day.
 
-And I want to become better at giving you all of those things.
-
-I know words cannot instantly heal hurt.
+I know words alone cannot heal hurt.
 
 But I hope you know they come from a place of honesty.
 
@@ -143,9 +172,11 @@ Thank you for every smile.
 
 Every adventure.
 
+Every memory.
+
 Every hug.
 
-Every memory.
+And every moment you’ve shared with me.
 
 Most importantly,
 
@@ -153,90 +184,118 @@ Thank you for being you.
 
 Love,
 
+<br>
 Yashu ❤️
 
 </p>
-
-<h2>Some Of My Favourite Memories ❤️</h2>
-
+</div>
+<div class="card">
+<h2>Our Favourite Memories ❤️</h2>
+<br>
 <div class="gallery">
-
-<img src="photo1.jpg">
+<img src="photo1.jpg" class="active">
 <img src="photo2.jpg">
 <img src="photo3.jpg">
 <img src="photo4.jpg">
 <img src="photo5.jpg">
-
 </div>
-
+</div>
+<div class="card">
 <h2>Things I Love About You ❤️</h2>
-
-<p>
-
-❤️ Your smile<br><br>
-
-❤️ Your kindness<br><br>
-
-❤️ The way you care about people<br><br>
-
-❤️ The way you make ordinary days special<br><br>
-
-❤️ The way you make every place feel like home<br><br>
-
-❤️ The way you believe in me
-
-</p>
-
-<div id="forgive">
-
+<div class="love-grid">
+<div class="love-card">❤️ Your smile</div>
+<div class="love-card">❤️ Your kindness</div>
+<div class="love-card">❤️ The way you care</div>
+<div class="love-card">❤️ The way you make ordinary days special</div>
+<div class="love-card">❤️ The way you make every place feel like home</div>
+<div class="love-card">❤️ The way you believe in me</div>
+</div>
+</div>
+<div class="card">
 <h2>Can We Keep Making Memories Together? ❤️</h2>
-
-<button onclick="forgive()">
+<br>
+<button class="btn" onclick="forgive()">
 Yes ❤️
 </button>
-
+<button class="btn" id="noBtn">
+No 😔
+</button>
 </div>
-
-</section>
-
+</div>
 <script>
 
-function showLetter(){
-document.getElementById("letter").style.display="block";
-document.getElementById("forgive").style.display="block";
+function openLetter(){
+document.getElementById('main').style.display='block';
 window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
+top:window.innerHeight,
+behavior:'smooth'
 });
 }
+
+const imgs=document.querySelectorAll('.gallery img');
+let current=0;
+
+setInterval(()=>{
+imgs[current].classList.remove('active');
+current=(current+1)%imgs.length;
+imgs[current].classList.add('active');
+},2500);
+
+const hearts=document.querySelector('.hearts');
+
+setInterval(()=>{
+const h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(15+Math.random()*25)+'px';
+hearts.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},8000);
+
+},400);
+
+const noBtn=document.getElementById('noBtn');
+
+noBtn.addEventListener('mouseover',()=>{
+
+noBtn.style.position='absolute';
+noBtn.style.left=Math.random()*70+'vw';
+noBtn.style.top=Math.random()*50+'vh';
+
+});
 
 function forgive(){
 
 document.body.innerHTML=`
 
-<div style="height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-background:#111;
-color:white;
-text-align:center;
-padding:30px">
+<div class="final">
 
-<h1>I Love You Ishi ❤️</h1>
+<h1 style="font-size:3rem">
+I Love You Ishi ❤️
+</h1>
 
-<p>
+<br>
 
-I promise to keep learning.
+<p style="font-size:20px;max-width:600px;line-height:1.8">
 
-Keep growing.
+I promise to keep learning,
 
-And keep loving you better.
+keep growing,
+
+and keep loving you better.
 
 </p>
 
-<h2>Forever Yours,<br>Yashu ❤️</h2>
+<br>
+
+<h2>
+Forever Yours,
+<br>
+Yashu ❤️
+</h2>
 
 </div>
 
@@ -244,7 +303,4 @@ And keep loving you better.
 
 }
 
-</script>
-
-</body>
-</html>
+</script
