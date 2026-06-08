@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>For Ishi ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.open{
+background:#ff4d88;
+color:white;
+}
+
+section{
+padding:50px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+}
+
+#letter{
+display:none;
+}
+
+#forgive{
+display:none;
+padding-bottom:100px;
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>Hi Ishi ❤️</h1>
+
+<p>
+Before anything else,
+I want you to know this page exists because you mean the world to me.
+</p>
+
+<button class="open" onclick="showLetter()">
+Open My Heart ❤️
+</button>
+
+</div>
+
+<section id="letter">
+
+<h2>To The Most Adorable & Lovable Person In My Life ❤️</h2>
+
+<p>
+
+Ishi,
+
+I am sorry.
+
+Sorry for hurting the person I love the most.
+
+When I look at these pictures, I don't just see photos.
+
+I see memories.
+
+I see laughter.
+
+I see comfort.
+
+I see the person who has stood beside me through so much.
+
+The truth is that I have always been slow when it comes to expressing love.
+
+Not because I don't feel it.
+
+But because sometimes I struggle to show it in the way you deserve.
+
+That isn't an excuse.
+
+It's simply something I am learning about myself the hard way.
+
+You deserve effort.
+
+You deserve reassurance.
+
+You deserve peace.
+
+You deserve love that is visible.
+
+And I want to become better at giving you all of those things.
+
+I know words cannot instantly heal hurt.
+
+But I hope you know they come from a place of honesty.
+
+Thank you for every smile.
+
+Every adventure.
+
+Every hug.
+
+Every memory.
+
+Most importantly,
+
+Thank you for being you.
+
+Love,
+
+Yashu ❤️
+
+</p>
+
+<h2>Some Of My Favourite Memories ❤️</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+
+</div>
+
+<h2>Things I Love About You ❤️</h2>
+
+<p>
+
+❤️ Your smile<br><br>
+
+❤️ Your kindness<br><br>
+
+❤️ The way you care about people<br><br>
+
+❤️ The way you make ordinary days special<br><br>
+
+❤️ The way you make every place feel like home<br><br>
+
+❤️ The way you believe in me
+
+</p>
+
+<div id="forgive">
+
+<h2>Can We Keep Making Memories Together? ❤️</h2>
+
+<button onclick="forgive()">
+Yes ❤️
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+document.getElementById("forgive").style.display="block";
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+}
+
+function forgive(){
+
+document.body.innerHTML=`
+
+<div style="height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:#111;
+color:white;
+text-align:center;
+padding:30px">
+
+<h1>I Love You Ishi ❤️</h1>
+
+<p>
+
+I promise to keep learning.
+
+Keep growing.
+
+And keep loving you better.
+
+</p>
+
+<h2>Forever Yours,<br>Yashu ❤️</h2>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
